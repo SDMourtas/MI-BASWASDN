@@ -24,8 +24,8 @@ Also, the kit includes the following four datasets:
 
 # Installation
 *	Unzip the file you just downloaded and copy the MI-BASWASDN directory to a location,e.g.,/my-directory/
-*	Run Matlab/ Octave, Go to /my-directory/MI-BASWASDN/ at the command prompt
-*	run 'Main_MI_BASWASDN (Matlab/Octave)
+*	Run Matlab, Go to /my-directory/MI-BASWASDN/ at the command prompt
+*	run 'Main_MI_BASWASDN
 
 # Results
 After running the 'Main_MI_BASWASDN.m file, the package outputs are the following:
