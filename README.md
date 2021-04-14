@@ -4,7 +4,7 @@ The purpose of this package is to model and predict balance of payments, listed 
 Considering this problem's approach through neuronet, using the weight direct determination (WDD) method and given a maximum number of hidden-layer neurons, the BASWASD algorithm finds the optimal number of hidden-layer neurons along with the optimal power of the activation function at each hidden-layer neuron that reduces the model's error during the validation procedure.
 
 The main article used is the following:
-*	T.E. Simos, V.N.Katsikis, S.D.Mourtas, "Multi-Input Beetle Antennae Search WASD Neuronet with Applications in European Central Bank Publications," (submitted)
+*	T.E. Simos, V.N.Katsikis, S.D.Mourtas, "Multi-Input Beetle Antennae Search Weights and Structure Determinantion Neuronet with Applications in European Central Bank Publications," (submitted)
 
 Also, the kit includes the following four datasets:
 *	BP6: Balance of Payments and International Investment Position (BPM6), taken from https://sdw.ecb.europa.eu/browse.do?node=bbn62
