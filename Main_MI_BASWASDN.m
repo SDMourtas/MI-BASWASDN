@@ -11,9 +11,9 @@
 %           spirosmourtas@gmail.com                                 %
 %                                                                   %
 %   Main paper: T.E. Simos, S.D.Mourtas, V.N.Katsikis,              %
-%               "Multi-Input Beetle Antennae Search Weights and     %
-%               Structure Determinantion Neuronet with Applications %
-%               in European Central Bank Publications",(submitted)  %
+%               "Multi-Input Beetle Antennae Search WASD Neuronet   %
+%                with Applications in European Central Bank         %
+%                Publications",(submitted)                          %
 %                                                                   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -23,10 +23,11 @@ clc
 
 % Choose modeling problem (for x = 1 to 4)
 x=1;
-[X_train,Y_train,X_test,Y_test,p,d,delta]=problem(x);
+% Choose method: BASWASD (y = 1) or MIHPN_WASD (y = 2)
+y=1;
+
+[X_train,Y_train,X_test,Y_test,p,d,delta,n,tmax]=problem(x);
 [H,M]=size(X_train);
-n=10;    % number of hidden units
-tmax=40; % number of training iterations
 
 %% Training
 % Data Preprocessing - Normalization
@@ -34,14 +35,21 @@ tmax=40; % number of training iterations
 [y_N,y_min,y_max]=Normalization(Y_train);
 
 % Neuronet model
+if y==1
 tic
 [W,N,Em,E]=BASWASD(z_N,y_N,H,M,n,tmax,p,d,delta);  % optimal hidden-layer structure
 toc
+elseif y==2
+tic
+[W,N,Em,E]=MIHPN_WASD(z_N,y_N,H,M);  % optimal hidden-layer structure
+toc
+end
 
 %% Predict
-pred=predictN(X_test,W,N,z_min,z_max,y_min,y_max); % forecasting for the next Z data
+predt=predictN(X_train,W,N,z_min,z_max,y_min,y_max,y);
+pred=predictN(X_test,W,N,z_min,z_max,y_min,y_max,y);
 
-Et=error_pred(pred,Y_test); % Error of test data
+Et=error_pred(predt,Y_train,pred,Y_test); % Error of test data
 
 %% Figures
 [k,ind]=sort(Y_test);
@@ -58,6 +66,11 @@ figure
 semilogy(0:length(E)-1,E,'Color',[0.4940 0.1840 0.5560])
 hold on
 semilogy(find(E==Em)-1,Em,'.','Color',[0.4660 0.6740 0.1880],'MarkerSize',16)
-xlabel('Iteration');ylabel('MAPE %')
+xlabel('Iteration');
+if y==1
+    ylabel('MAPE %')
+elseif y==2
+    ylabel('Average Error')
+end
 legend('$E_N$','$E_{N^*}$','Interpreter','latex')
 hold off

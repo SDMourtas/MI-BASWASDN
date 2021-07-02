@@ -1,4 +1,4 @@
-function [X_train,Y_train,X_test,Y_test,p,d,delta]=problem(x)
+function [X_train,Y_train,X_test,Y_test,p,d,delta,n,tmax]=problem(x)
 % Input data and parameters of the MI-BASWASDN setup
 
 warning off
@@ -10,6 +10,8 @@ if x==1
     varnames=data.Properties.VariableNames;
     T = array2table(xx,'VariableNames',varnames);
     p=0.65;d=8;delta=5;
+    n=10;    % number of hidden units
+    tmax=40; % number of training iterations
 elseif x==2
     filename='Listed shares issued by euro area residents.csv';  % Example 2
     data=readtable(filename,'ReadVariableNames',true,'ReadRowNames' ,true,'TreatAsEmpty' ,'-');
@@ -17,7 +19,9 @@ elseif x==2
     xx=str2double(data{:,:}); 
     varnames=data.Properties.VariableNames;
     T = array2table(xx,'VariableNames',varnames);
-    p=0.75;d=10;delta=5;
+    p=0.75;d=10;delta=10;
+    n=10;    % number of hidden units
+    tmax=60; % number of training iterations
 elseif x==3
     filename='Trade in goods, Eurostat External Trade Statistics.csv';  % Example 3
     data=readtable(filename,'ReadVariableNames',true,'ReadRowNames' ,true,'TreatAsEmpty' ,'-');
@@ -25,7 +29,9 @@ elseif x==3
     xx=str2double(data{:,:}); 
     varnames=data.Properties.VariableNames;
     T = array2table(xx,'VariableNames',varnames);
-    p=0.7;d=8;delta=5;
+    p=0.7;d=10;delta=10;
+    n=10;    % number of hidden units
+    tmax=60; % number of training iterations
 elseif x==4
     filename='liq_daily_2020.csv';  % Example 4
     data=readtable(filename,'ReadVariableNames',true,'ReadRowNames' ,true,'TreatAsEmpty' ,'-');
@@ -34,6 +40,8 @@ elseif x==4
     varnames=data.Properties.VariableNames;
     T = array2table(xx,'VariableNames',varnames);
     p=0.85;d=10;delta=5;
+    n=10;    % number of hidden units
+    tmax=40; % number of training iterations
 else
     fprintf('Error: No valid problem.\n')
     return
