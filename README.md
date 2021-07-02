@@ -3,8 +3,9 @@ Implementation of a fast 3-layer feed-forward neuronet model that is trained usi
 The purpose of this package is to model and predict balance of payments, listed shares, trade in goods and daily liquidity conditions.
 Considering this problem's approach through neuronet, using the weight direct determination (WDD) method and given a maximum number of hidden-layer neurons, the BASWASD algorithm finds the optimal number of hidden-layer neurons along with the optimal power of the activation function at each hidden-layer neuron that reduces the model's error during the validation procedure.
 
-The main article used is the following:
+The main articles used are the followings:
 *	T.E. Simos, V.N.Katsikis, S.D.Mourtas, "Multi-Input Beetle Antennae Search Weights and Structure Determinantion Neuronet with Applications in European Central Bank Publications," (submitted)
+*	Y. Zhang, D. Chen, and C. Ye, Deep Neural Networks: WASD Neuronet Models, Algorithms, and Applications. CRC Press, 2019.
 
 Also, the kit includes the following four datasets:
 *	BP6: Balance of Payments and International Investment Position (BPM6), taken from https://sdw.ecb.europa.eu/browse.do?node=bbn62
@@ -17,10 +18,12 @@ Also, the kit includes the following four datasets:
 *	problem.m: input data and parameters of the MI-BASWASDN
 *	BASWASD.m: function for finding the optimal number of hidden-layer neurons, along with the optimal activation function power at each hidden-layer neuron
 *	fitness.m: the objective function that must be minimized by BAS
+*	MIHPN_WASD.m: function for finding the optimal number of hidden-layer neurons
 *	Normalization.m: function for normalization
 *	Qmatrix.m: function for calculating the matrix Q
+*	Qmatrix2.m: function for calculating the matrix Q
 *	predictN.m: function for predicting
-*	error_pred.m: function for calculating the mean absolute percentage error (MAPE) of the prediction
+*	error_pred.m: function for calculating the coefficient of determination (R-squared), mean absolute error (MAE) and root-mean-square error (RMSE) of the predicted prices
 
 # Installation
 *	Unzip the file you just downloaded and copy the MI-BASWASDN directory to a location,e.g.,/my-directory/
