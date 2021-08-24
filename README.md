@@ -19,6 +19,8 @@ Also, the kit includes the following four datasets:
 *	BASWASD.m: function for finding the optimal number of hidden-layer neurons, along with the optimal activation function power at each hidden-layer neuron
 *	fitness.m: the objective function that must be minimized by BAS
 *	MIHPN_WASD.m: function for finding the optimal number of hidden-layer neurons
+*	EGPR.m: function for creating a neural network model based on linear SVM method
+*	LSVM.m: function for creating a neural network model based on exponential GPR method
 *	Normalization.m: function for normalization
 *	Qmatrix.m: function for calculating the matrix Q
 *	Qmatrix2.m: function for calculating the matrix Q
@@ -34,7 +36,7 @@ Also, the kit includes the following four datasets:
 After running the 'Main_MI_BASWASDN.m file, the package outputs are the following:
 *	The optimal number of hidden-layer neurons.
 *	The optimal activation function power of each hidden-layer neuron.
-*	The prediction and MAPE of the testing samples.
+*	The models predictions and statistics on the training and testing samples.
 *	The graphic illustration of the testing and predicting performance.
 
 # Environment
