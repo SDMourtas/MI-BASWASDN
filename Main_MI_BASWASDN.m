@@ -11,9 +11,9 @@
 %           spirosmourtas@gmail.com                                 %
 %                                                                   %
 %   Main paper: T.E. Simos, S.D.Mourtas, V.N.Katsikis,              %
-%               "Multi-Input Beetle Antennae Search WASD Neuronet   %
-%                with Applications in European Central Bank         %
-%                Publications",(submitted)                          %
+%               "Multi-Input Bio-inspired Weights and Structure     %
+%               Determination Neuronet with Applications in         %
+%               in European Central Bank Publications",(submitted)  %
 %                                                                   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
