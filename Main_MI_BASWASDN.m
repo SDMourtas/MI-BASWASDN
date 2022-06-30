@@ -6,15 +6,15 @@
 %                                                                   %
 %  Author and programmer: T.E. Simos, V.N.Katsikis, S.D.Mourtas     %
 %                                                                   %
-%   e-Mail: tsimos.conf@gmail.com                                   %
-%           vaskatsikis@econ.uoa.gr                                 %
-%           spirosmourtas@gmail.com                                 %
+%  e-Mail: tsimos.conf@gmail.com                                    %
+%          vaskatsikis@econ.uoa.gr                                  %
+%          spirosmourtas@gmail.com                                  %
 %                                                                   %
-%   Main paper: T.E. Simos, S.D.Mourtas, V.N.Katsikis,              %
-%               "Multi-Input Bio-inspired Weights and Structure     %
-%               Determination Neuronet with Applications in         %
-%               in European Central Bank Publications",(submitted)  %
-%                                                                   %
+%  Main paper: T.E. Simos, S.D.Mourtas, V.N.Katsikis,               %
+%              "Multi-Input Bio-inspired Weights and Structure      %
+%              Determination Neuronet with Applications in          %
+%              in European Central Bank Publications", Mathematics  %
+%              and Computers in Simulation, vol. 193, 451-465 (2021)%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clear 
