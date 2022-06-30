@@ -4,7 +4,7 @@ The purpose of this package is to model and predict balance of payments, listed 
 Considering this problem's approach through neuronet, using the weight direct determination (WDD) method and given a maximum number of hidden-layer neurons, the BASWASD algorithm finds the optimal number of hidden-layer neurons along with the optimal power of the activation function at each hidden-layer neuron that reduces the model's error during the validation procedure.
 
 The main articles used are the followings:
-*	T.E. Simos, V.N.Katsikis, S.D.Mourtas, "Multi-Input Bio-inspired Weights and Structure Determination Neuronet with Applications in European Central Bank Publications," (submitted)
+*	T.E. Simos, V.N.Katsikis, S.D.Mourtas, "Multi-Input Bio-inspired Weights and Structure Determination Neuronet with Applications in European Central Bank Publications", Mathematics and Computers in Simulation, vol. 193, 451-465 (2021)
 *	Y. Zhang, D. Chen, and C. Ye, Deep Neural Networks: WASD Neuronet Models, Algorithms, and Applications. CRC Press, 2019.
 
 Also, the kit includes the following four datasets:
